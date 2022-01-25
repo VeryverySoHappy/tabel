@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      /* 무조건 하고 간다. reset 파일에 넣어준다. */
+    }
+    table,th,td {
+      border: 1px solid #222;
+    }
+
+  </style>
+</head>
+<body>
+  <table>
+  <!-- <table summary=""> -->
+    <!-- <!DOCTYPE html> html 적용 안 함-->
+    <!-- summary : table 설명 -->
+    <!-- <!DOCTYPE html> 문서 선언인경우 적용하지 않음 -->
+    <!-- html4에서 사용 -->
+    <caption>취업현황</caption>
+    <colgroup>
+      <col width="150"/>
+      <!-- <col width ="20%"> 처럼 퍼센트 단위로 작성해도됌 -->
+    </colgroup>
+    <thead>
+      <!-- thead에는 td적용 안 됌 th만 가능-->
+      <tr>
+        <th>구분</th>
+        <th scope="col" id="web1">웹디자이너</th>
+        <!-- th는 볼드체, 자동 가운데 정렬 -->
+        <!-- td는 왼쪽 정렬 -->
+        <th scope="col" id="web2">웹퍼블리셔</th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <th scope="row" id="total">합계</th>
+        <td headers="web1 total">20명</td>
+        <!--
+          데이터가 읽어야되는 순서 작성 
+          웹 디자이너 합계 20명
+        -->
+        <!-- 접근성 마크 따야되느 사이트면 하기 -->
+        <td headers="web2 total">30명</td>
+      </tr>
+      <tbody>
+        <tr>
+          <th scope="row">1월취업</th>
+          <td>10명</td>
+          <td>10명</td>
+        </tr>
+        <tr>
+          <th scope="row">2월취업</th>
+          <td>10명</td>
+          <td>20명</td>
+        </tr>
+      </tbody>
+    </tfoot>
+  </table>
+
+<!-- colspan 세로병합, rowspan 가로병합-->
+  <table>
+    <tr>
+      <td rowspan="2">1, 4</td>
+      <!-- 병합할 칸의 수 -->
+      <!-- <td rowspan="2">1</td> -->
+      <!-- 밀려버림 -->
+      <td colspan="2">2, 3</td>
+      <!-- <td>3</td> -->
+    </tr>
+    <tr>
+      <!-- <td>4</td> -->
+      <!-- 지워줘야 포함이 됌 -->
+      <td>5</td>
+      <td>6</td>
+    </tr>
+  </table>
+</body>
+</html>

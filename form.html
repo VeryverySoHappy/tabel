@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- radio, checkbox는 어떤 브라우저든 가능 -->
+  <!-- radio는 여러개 중에 하나  -->
+  <form method="post" name="frm" accept="">
+    <!--fieldset:관련요소를 그룹화, legend():fieldset의 제목) 는 선택입력 (필수입력 아님)-->
+      <!-- <fieldse>을 쓰면 <legend>를 꼭 써야됌, 필수 요소 아님 -->
+      <legend>요소확인</legend>
+      <input type="radio" id="web1" name="web"/>
+<!-- 입력창  형식 -->
+                          <!--중요2 id 값은 다 다르게 작성 -->
+                                    <!--중요1 name 같아야된다.(다르면 다중선택됌) -->
+      <label for="web1">웹디자이너</label><br/>
+      <!-- 중요 3 id값과 label의 for의 값이 같아야됌 -->
+      <!-- radio버튼만 누르기는 힘듬 글자를 눌러도 눌러지게함 -->
+      <input type="radio" id="web2" name="web"/>
+      <label for="web2">퍼블리셔</label><br/>
+
+      <input type="radio" id="web3" name="web"/>
+      <label for="web3">프론트엔드</label><br/>
+
+      <input type="radio" id="web4" name="web"/>
+      <label for="web4">백엔드</label><br/>
+
+      <input type="radio" id="web5" name="web"/>
+      <label for="web5">기획자</label><br/>
+
+      <input type="checkbox" id="job1" name="job"/>
+      <label for="job1">1월 취업</label><br/>
+
+      <input type="checkbox" id="job2" name="job"/>
+      <label for="job2">2월 취업</label><br/>
+
+
+      <!-- caniuse. -->
+      <!-- password, text 차이점 -->
+      <input type="password" name="pw" placeholder="비밀번호"/><br/>
+                                    <!-- 짧은건 가능 -->
+                                    <!-- 글자를 치면 비밀번호 글자가 날라감 -->
+      <input type="text" name="text" value="이름을 입력하세요"/><br/>
+                                    <!-- 긴거 입력 가능 -->
+                                    <!-- 글자를 치면 글자가 안 날라감 -->
+
+                                    
+
+
+        <!-- 익스 10이상 지원 -->
+        <!-- 모바일 작성할 땐 사용, 일반 웹은 ㄴㄴ -->
+      <input type="search" name="search" title="제품검색"/><br/>
+                                  <!-- label을 안 쓸 때 title 작성 , 
+                                    label을 작성 안 하면 무슨 입력창인지 알 수 없어서 써줌
+                                  네이버 로그인 페이지에서 아이디, 비밀번호 입력창 처럼 '아이디''비밀번호'가 안 적혀있음면
+                                  무슨 창인지 모름
+                                  -->
+      <input type="tel" name="tel" placeholder="010-4057-6001"/><br/>
+      <input type="url" name="url" value="http://" title="홈페이지주소 입력"/><br/>
+      <input type="email" name="email" placeholder="이메일 입력"><br/>
+      <!-- name은 필수 입력 -->
+      <input type="month" name="mm" /><br/><!--ie12~-->
+      <!-- 익스는 아예 다 안 됌, 안 되는 버전이 많음 -->
+      <input type="date" name="dd"><br/><!--ie12~-->
+      <input type="time" name="tt"><br/><!--ie12~-->
+      <input type="week" name="ww"><br/><!--ie12~-->
+      <input type="number" max="10" min="1" step="2" name="number"/><br/>
+      <input type="color" name="color"/><!--ie38~, 모바일에서는 가능-->
+      <input type="range" name="range" min="0" max="10"/>
+
+
+
+
+
+
+      <input list="web" name="web"/>
+      <datalist id="web">
+        <option value="웹디자이너"></option>
+        <option value="웹퍼블리셔"></option>
+        <option value="프론트엔드"></option>
+        <option value="백엔드"></option>
+        <option value="웹기획"></option>
+      </datalist>
+
+      <select name="select">
+        <!-- css로 변경 가능 -->
+        <option value="">다음</option>
+        <option value="">네이버</option>
+        <option value="">구글</option>
+        <option value="">야후</option>
+      </select>
+
+      <select name="ss" id="">
+        <optgroup label="퍼블리셔">
+          <option value="">html</option>
+          <option value="">css</option>
+          <option value="">javascript</option>
+          <option value="">jquery</option>
+        </optgroup>
+        <optgroup label="프론트">
+          <option value="">html</option>
+          <option value="">css</option>
+          <option value="">javascript</option>
+          <option value="">jquery</option>
+          <option value="">vue</option>
+        </optgroup>
+      </select>
+
+      <input type="file" name="ff" title="파일업로드"/>
+      <!-- 브라우저마다 보이는 형태가 다름 -->
+
+      <button>전송</button>
+      <input type="submit" name="btn" value="전송"/>
+      <input type="reset" name="btn" value="취소"/>
+      <input type="image" src="./images/bg_snsy.png" alt="kiost" title="kiost검색">
+    </fieldset>
+  </form>
+
+  <!-- figure, figcaption 사용가능 할 때-->
+  1. 본문에서 떼어낼수 있는 사진, 일러스트, 도표, 그림, 코드...
+  2. 동일페이지에서 이동 가능한 경우
+  3. 전용페이지나 부록같은 별도의 페이지 등으로 이동가능
+
+  <figure>
+    <img src="images/wa_mark.png" alt="웹접근성마크"/>
+    <figcaption>22년 1월 25일 웹접근성인증 취득</figcaption>
+    <!-- 사진에 대한 제목, 타이틀 -->
+    <!-- alt, figcaption에  동일한 내용이 들어가지 않음 다른 내용이 들어감 -->
+    <!-- 미술 전시, 그림같은건 안 됌 figcaption민 있고 그림이 없으면 안 됌, 이미지를 넣고 span태그로 설명 작성-->
+    <!-- 네이버 기사 사진은 그림같은 경우 떼어내도됌 -->
+    <!-- (모든 사진에 다 넣을 수 있지 않음 ) -->
+    <!-- 가끔 사용하는 태그  -->
+  </figure>
+
+  <!-- video, audio -->
+  <!--확장자 : mp4(모든 브라우저 호환 됌), ogg,  -->
+  <video src="./images/Bears.mp4" autoplay  loop  controls width="400"  height="400">
+                            <!-- 자동실행   무한반복한다  컨트롤 할 수 잇다 -->
+  <!-- html5버전에서 만들어진거라서 익스 하위버전에서는 적용되지 않음 9브라우저에서부터 가능-->
+    <p class="skip">사용중인 브라우저에서는 재생할 수 없습니다.<a href="./images/Bears.mp4">파일</a>을 다운로드 하세요.</p>
+    <!-- video가 실행이 안 되면 p태그 부분이 실행됌 --><!--video태그가 활성화가 되는 곳은 저 태그가 실행이 됌, 활성화를 할 수 없는 부분은 a태그 부분이 보임 그래서 클릭을해서 다운로드 할 수 있게 작업을 해줌 -->
+  </video>
+  <!-- video를 사용하고싶은데 영상이 너무 크면 프리미어나 핸드폰 어플을 이용해서 영상을 짧게 만들어놓자 -->
+  <!-- 용량이 너무 크면 용량을 줄이는 작업을 해야됌 -->
+  
+  <audio src="./images/ost.mp3" autoplay  loop  controls width="400"  height="400">
+    <p class="skip">사용중인 브라우저에서는 재생할 수 없습니다.<a href="./images/ost.mp3">파일</a>을 다운로드 하세요.</p>
+  </audio>
+
+</body>
+</html>
