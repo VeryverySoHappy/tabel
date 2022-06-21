@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrap">
+    <form action="" method="post" name="frm">
+                                  <!-- 임의로 지정한 이름 -->
+      <label for="mem_name">이름(필수)</label>
+      <input type="text" id="mem_name" name="userName" maxlength="10" size="15"/>
+      <!-- name : 스크립트에서 불러서 사용할 때 사용 -->
+      <label for="mem_phone">전화번호(필수)</label>
+      <input type="text" id="mem_phone" name="userPhone" maxlength="11" size="20"/>
+      <a href="" class="addBtn"><img src="./images/btn_add.gif" alt=""></a>
+    </form>
+    <table id="addressList" class="noData">
+      <caption>전화번호부</caption>
+      <colgroup>
+        <col width="40%"/>
+        <col width="40%"/>
+        <col width="20"/>
+      </colgroup>
+      <thead>
+        <tr>
+          <th scope="col">이름</th>
+          <th scope="col">전화번호</th>
+          <th scope="col">삭제</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="3">등록된 내용이 없습니다</td>
+        </tr>
+        <!-- <tr>
+          <td>홍길동</td>
+          <td>010-1234-5678</td>
+          <td>
+            <a href=""><img src="./images/btn_del.gif" alt=""></a>
+          </td>
+        </tr> -->
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
